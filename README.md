@@ -1,2 +1,4 @@
-# sms-spammer
-Prank your Friend with this Tools
+# SPAMMER SYSTEM
+Research about API FAKE REQUEST
+
+./launcher.sh
