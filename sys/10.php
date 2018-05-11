@@ -1,12 +1,12 @@
 <?php
 include 'functions.php';
 /*
-    HooQ Client System
+    HOOQ Client System
     Made by Handika Pratama
     Modified by Fray117
 */
 $init = new hooq();
-echo "Target (use country code): ";
+echo "\033[32;1mTarget: +62";
 $target = trim(fgets(STDIN));
 echo "Threads: ";
 $thread = trim(fgets(STDIN));

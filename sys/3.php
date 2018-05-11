@@ -1,5 +1,5 @@
 <?php
-include 'function.php';
+include 'functions.php';
 
 /*
     Matahari Mall Client System
@@ -9,12 +9,12 @@ include 'function.php';
 
 $init = new mataharimall();
 // Configure Mataharimall Account
-$init->email = "zumupolij@c1oramn.com";
-$init->pass = "Hilih kintil";
+$init->email = "someagaiuiu4ahh39%40gmail.com";
+$init->pass = "179g379g1g3aofhuo";
 $init->Login($init->email,$init->pass);
 
 // Execution
-echo "Target (using country code): ";
+echo "\033[32;1mTarget (using country code): ";
 $a = trim(fgets(STDIN));
 $init->target = "$a";
 echo "Threads: ";

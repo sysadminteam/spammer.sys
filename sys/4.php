@@ -10,7 +10,7 @@ include 'functions.php';
 $init = new phd();
 
 // Execution
-echo "Target (use country code): ";
+echo "\033[32;1mTarget (use country code): ";
 $a = trim(fgets(STDIN));
 $init->target = "$a";
 echo "Threads: ";

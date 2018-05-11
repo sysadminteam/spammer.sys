@@ -7,16 +7,10 @@ include 'functions.php';
 */
 
 $init = new tokopedia();
-
-//Call/Text Bomber Execution (Limit 100x/Hour)
-
-echo "Target: ";
+echo "\033[32;1mTarget: ";
 $target = trim(fgets(STDIN));
-echo "2 for call, 1 for Text";
-echo "type: ";
-$type = trim(fgets(STDIN));
 $init->target = "$target";
-$init->type = 2;
+$init->type = 1;
 //$init->target = "+62895371761108";
 
 if ($init->type == 1) {

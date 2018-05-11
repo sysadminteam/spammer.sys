@@ -1,11 +1,11 @@
 <?php
 include 'functions.php';
 /*
-    PHD Client System
+    Telkomsel Client System
     Developed by Handika Pratama
     Modified by Fray117
 */
-echo "Target: ";
+echo "\033[32;1mTarget: ";
 $target = trim(fgets(STDIN));
 echo "Threads: ";
 $thread = trim(fgets(STDIN));

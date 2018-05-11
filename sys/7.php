@@ -6,7 +6,7 @@ include 'functions.php';
     Modified by Fray117
 */
 $init = new kfc();
-echo "Target (use country code): ";
+echo "\033[32;1mTarget (use country code): ";
 $target = trim(fgets(STDIN));
 echo "Threads: ";
 $thread = trim(fgets(STDIN));

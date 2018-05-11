@@ -6,7 +6,7 @@ include 'functions.php';
     Developed by Handika Pratama
 */
 
-echo "Target: ";
+echo "\033[32;1mTarget: ";
 $target = trim(fgets(STDIN));
 echo "Threads: ";
 $thread = trim(fgets(STDIN));

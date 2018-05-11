@@ -1,12 +1,12 @@
 <?php
 include 'functions.php';
 /*
-    Whiskas Client System
+    whiskas Client System
     Made by Handika Pratama
     Modified by Fray117
 */
 $init = new whiskas();
-echo "Target: ";
+echo "\033[32;1mTarget: ";
 $target = trim(fgets(STDIN));
 echo "Threads: ";
 $thread = trim(fgets(STDIN));

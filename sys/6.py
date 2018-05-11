@@ -1,8 +1,4 @@
 #!/usr/bin/python
-# Email Bomber
-# This code for education purpose only.
-# Use it at your own risk!
-
 import os
 import smtplib
 import getpass
