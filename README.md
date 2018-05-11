@@ -5,4 +5,4 @@ to run the script, execute launcher shell script.
 $ ./launcher.sh
 ```
 
-CLI v0.3 - Web GUI (not yet)
+CLI v0.4 - Web GUI (not yet)
