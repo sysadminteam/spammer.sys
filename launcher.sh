@@ -246,7 +246,7 @@ echo "\033[31;1mDeveloper: SYSTEM ADMINISTRATOR"
 sleep 2
 echo "\033[33;1mAuthor: Fray117"
 sleep 1
-echo "\033[32;1mCLI v0.3"
+echo "\033[32;1mCLI v0.4"
 sleep 1
 echo "\033[36;1mTeam: Reverse Elite System Exploiter Team"
 sleep 1
