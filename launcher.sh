@@ -1,25 +1,57 @@
 #!/bin/sh
+#Title........: SPAMMER SYSTEM
+#Description..: SPAMMER SYSTEM LAUNCHER
+#Author.......: Fray117
+#Date.........: 12 May 2018
+#Version......: CLI 0.4
+#Bash Version.: 4.2 or later
+
+version="CLI v0.4.3"
+
+#Colors vars
+green_color="\033[1;32m"
+green_color_title="\033[0;32m"
+red_color="\033[1;31m"
+red_color_slim="\033[0;031m"
+blue_color="\033[1;34m"
+cyan_color="\033[1;36m"
+brown_color="\033[0;33m"
+yellow_color="\033[1;33m"
+pink_color="\033[1;35m"
+white_color="\033[1;37m"
+normal_color="\033[1;0m"
+
+function print_logo() {
+  sleep 0.15 && echo "${green_color} _______ ______ _______ _______ _______ _______ ______"
+  sleep 0.15 && echo "|     __|   __ \   _   |   |   |   |   |    ___|   __ |"
+  sleep 0.15 && echo "|__     |    __/       |       |       |    ___|      <"
+  sleep 0.15 && echo "|_______|___|  |___|___|__|_|__|__|_|__|_______|___|__|"
+  sleep 0.15 && echo ""
+  sleep 0.15 && echo " _______ ___ ___ _______ _______ _______ _______"
+  sleep 0.15 && echo "|     __|   |   |     __|_     _|    ___|   |   |"
+  sleep 0.15 && echo "|__     |\     /|__     | |   | |    ___|       |"
+  sleep 0.15 && echo "|_______| |___| |_______| |___| |_______|__|_|__|${normal_color}"
+  sleep 0.15 && echo ""
+  sleep 0.15 && echo "$version"
+  sleep 0.15
+}
+
+function dev() {
+  echo "DevMode ON"
+  pause 'Press anything to Exit'
+  exit
+}
+
 cd sys
 function pause() {
   read -p "$*"
 }
 clear
-echo "\033[32;1m
- _______ ______ _______ _______ _______ _______ ______
-|     __|   __ \   _   |   |   |   |   |    ___|   __ |
-|__     |    __/       |       |       |    ___|      <
-|_______|___|  |___|___|__|_|__|__|_|__|_______|___|__|
-
- _______ ___ ___ _______ _______ _______ _______
-|     __|   |   |     __|_     _|    ___|   |   |
-|__     |\     /|__     | |   | |    ___|       |
-|_______| |___| |_______| |___| |_______|__|_|__|
-
-"
-echo "\033[31;1m SYSTEM ADMINISTRATOR"
-echo "\033[33;1m Author: Fray117"
-echo "\033[32;1m contact: fray117.sys@gmail.com"
-echo "\033[36;1m Available Client:"
+print_logo
+echo "${red_color} SYSTEM ADMINISTRATOR"
+echo "${yellow_color} Author: Fray117"
+echo "${green_color} contact: fray117.sys@gmail.com"
+echo "${cyan_color} Available Client:"
 echo " 1.  tokopedia"
 echo " 2.  Telkomsel"
 echo " 3.  Matahari Mall"
@@ -34,15 +66,16 @@ echo " 11. PHPMailer"
 echo " 12. Facebook Comments"
 echo " 13. WordPress Comments"
 echo " 14. Grab"
+echo " 15. IP Tracer"
+echo " 16. IP Spammer"
 echo " 0.  Exit"
-echo "\033[30;1m 81. About this tool"
-echo "\033[33;1m Enter Number: \033[32;1m"
-read mrrm
-if [ $mrrm = 1 ] || [ $mrrm = 1 ]
+echo "${white_color} 81. About this tool"
+echo "${yellow_color} Enter Number: ${normal_color}"; read menu
+
+if [[ $menu = 1 ]] || [[ $menu = 1 ]]
 then
 clear
-echo "\033[32;1m"
-echo "
+echo "${green_color}
  __          __                         __ __
 |  |_.-----.|  |--.-----.-----.-----.--|  |__|.---.-.
 |   _|  _  ||    <|  _  |  _  |  -__|  _  |  ||  _  |
@@ -52,12 +85,10 @@ echo "
 php 1.php
 fi
 
-if
-[ $mrrm = 2 ] || [ $mrrm = 2 ]
+if [[ $menu = 2 ]] || [[ $menu = 2 ]]
 then
 clear
-echo "\033[31;1m"
-echo "
+echo "${red_color}
  _______         __ __                                __
 |_     _|.-----.|  |  |--.-----.--------.-----.-----.|  |
   |   |  |  -__||  |    <|  _  |        |__ --|  -__||  |
@@ -67,10 +98,10 @@ echo "
 php 2.php
 fi
 
-if [ $mrrm = 3 ] || [ $mrrm = 3 ]
+if [[ $menu = 3 ]] || [[ $menu = 3 ]]
 then
 clear
-echo "\033[31;1m"
+echo "${red_color}"
 echo "
  _______         __          __                __    _______         __ __
 |   |   |.---.-.|  |_.---.-.|  |--.---.-.----.|__|  |   |   |.---.-.|  |  |
@@ -81,7 +112,7 @@ php 3.php
 fi
 
 
-if [ $mrrm = 4 ] || [ $mrrm = 4 ]
+if [[ $menu = 4 ]] || [[ $menu = 4 ]]
 then
 clear
 echo "
@@ -90,12 +121,11 @@ echo "
 |    __/       |  --  |
 |___|  |___|___|_____/
 "
-echo "\033[30;1m"
+echo "${white_color}"
 php 4.php
 fi
 
-if
-[ $mrrm = 5 ] || [ $mrrm = 5 ]
+if [[ $menu = 5 ]] || [[ $menu = 5 ]]
 then
 clear
 echo "
@@ -103,12 +133,11 @@ echo "
  _|     |     \  |__|.--|  |
 |       |  --  |_|  ||  _  |
 |_______|_____/__|__||_____|"
-echo "\033[33;1m"
+echo "${normal_color}"
 php 5.php
 fi
 
-if
-[ $mrrm = 6 ] || [ $mrrm = 6 ]
+if [[ $menu = 6 ]] || [[ $menu = 6 ]]
 then
 clear
 echo "
@@ -117,11 +146,11 @@ echo "
 |    __/|   _||  ||  |  |  _  ||   _|  -__||       ||  _  ||  |  ||  -__|   _|
 |___|   |__|  |__| \___/|___._||____|_____||__|_|__||___._||__|__||_____|__|
 "
-echo "\033[36;1m"
+echo "${cyan_color}"
 python2 6.py
 fi
 
-if [ $mrrm = 7 ] || [ $mrrm = 7 ]
+if [[ $menu = 7 ]] || [[ $menu = 7 ]]
 then
 clear
 echo "
@@ -130,11 +159,11 @@ echo "
 |     <|    ___|   ---|
 |__|\__|___|   |______|
 "
-echo "\033[30;1m"
+echo "${white_color}"
 php 7.php
 fi
 
-if [ $mrrm = 8 ] || [ $mrrm = 8 ]
+if [[ $menu = 8 ]] || [[ $menu = 8 ]]
 then
 clear
 echo "
@@ -143,11 +172,11 @@ echo "
 |     __|  |    __/       |\     /
 |_______|__|___|  |___|___| |___|
 "
-echo "\033[30;1m"
+echo "${white_color}"
 php 8.php
 fi
 
-if [ $mrrm = 9 ] || [ $mrrm = 9 ]
+if [[ $menu = 9 ]] || [[ $menu = 9 ]]
 then
 clear
 echo "
@@ -156,11 +185,11 @@ echo "
 |  |  |  ||     ||  ||__ --||    <|  _  |__ --|
 |________||__|__||__||_____||__|__|___._|_____|
 "
-echo "\033[30;1m"
+echo "${white_color}"
 php 9.php
 fi
 
-if [ $mrrm = 10 ] || [ $mrrm = 10 ]
+if [[ $menu = 10 ]] || [[ $menu = 10 ]]
 then
 clear
 echo "
@@ -170,11 +199,11 @@ echo "
 |___|___||_____|_____|__   |
                         |__|
 "
-echo "\033[30;1m"
+echo "${white_color}"
 php 10.php
 fi
 
-if [ $mrrm = 11 ] || [ $mrrm = 11 ]
+if [[ $menu = 11 ]] || [[ $menu = 11 ]]
 then
 clear
 echo "
@@ -183,11 +212,11 @@ echo "
 |    __/       |    __/       ||  _  ||  |  ||  -__|   _|
 |___|  |___|___|___|  |__|_|__||___._||__|__||_____|__|
 "
-echo "\033[30;1m"
+echo "${white_color}"
 php 11.php
 fi
 
-if [ $mrrm = 12 ] || [ $mrrm = 12 ]
+if [[ $menu = 12 ]] || [[ $menu = 12 ]]
 then
 clear
 echo "
@@ -196,11 +225,11 @@ echo "
 |    ___|  _  | |   ---||  _  |        |        |  -__|     ||   _|__ --|
 |___|   |_____| |______||_____|__|__|__|__|__|__|_____|__|__||____|_____|
 "
-echo "\033[30;1m"
+echo "${white_color}"
 python 12.py
 fi
 
-if [ $mrrm = 13 ] || [ $mrrm = 13 ]
+if [[ $menu = 13 ]] || [[ $menu = 13 ]]
 then
 clear
 echo "
@@ -209,11 +238,11 @@ echo "
 |  |  |  ||  _  |   _|  _  |    __/|   _|  -__|__ --|__ --|
 |________||_____|__| |_____|___|   |__| |_____|_____|_____|
 "
-echo "\033[30;1m"
+echo "${white_color}"
 php 13.php
 fi
 
-if [ $mrrm = 14 ] || [ $mrrm = 14 ]
+if [[ $menu = 14 ]] || [[ $menu = 14 ]]
 then
 clear
 echo "
@@ -222,37 +251,48 @@ echo "
 |    |  ||   _|  _  ||  _  |
 |_______||__| |___._||_____|
 "
-echo "\033[30;1m"
+echo "${white_color}"
 python 14.py
 fi
 
-if
-[ $mrrm = 81 ] || [ $mrrm = 81 ]
+if [[ $menu = 15 ]] || [[ $menu = 15 ]]
 then
 clear
-echo "\033[32;1m
- _______ ______ _______ _______ _______ _______ ______
-|     __|   __ \   _   |   |   |   |   |    ___|   __ |
-|__     |    __/       |       |       |    ___|      <
-|_______|___|  |___|___|__|_|__|__|_|__|_______|___|__|
-
- _______ ___ ___ _______ _______ _______ _______
-|     __|   |   |     __|_     _|    ___|   |   |
-|__     |\     /|__     | |   | |    ___|       |
-|_______| |___| |_______| |___| |_______|__|_|__|
-
+echo "
+ _______ ______   _______
+|_     _|   __ \ |_     _|.----.---.-.----.-----.----.
+ _|   |_|    __/   |   |  |   _|  _  |  __|  -__|   _|
+|_______|___|      |___|  |__| |___._|____|_____|__|
 "
-echo "\033[31;1mDeveloper: SYSTEM ADMINISTRATOR"
-sleep 2
-echo "\033[33;1mAuthor: Fray117"
-sleep 1
-echo "\033[32;1mCLI v0.4"
-sleep 1
-echo "\033[36;1mTeam: Reverse Elite System Exploiter Team"
-sleep 1
-echo "\033[34;1mGitHub: https://github.com/sysadminteam/"
-echo "\033[31;1m Thanks to: "
-echo "\033[36;1m"
+echo "${white_color}"
+python 15.py
+fi
+
+if [[ $menu = 16 ]] || [[ $menu = 16 ]]
+then
+clear
+echo "
+ _______ ______   _______
+|_     _|   __ \ |     __|.-----.---.-.--------.--------.-----.----.
+ _|   |_|    __/ |__     ||  _  |  _  |        |        |  -__|   _|
+|_______|___|    |_______||   __|___._|__|__|__|__|__|__|_____|__|
+                          |__|
+"
+echo "${white_color}"
+python 16.py
+fi
+
+if [[ $menu = 81 ]] || [[ $menu = 81 ]]
+then
+clear
+print_logo
+echo "${red_color}Developer: SYSTEM ADMINISTRATOR"
+echo "${green_color}Author: Fray117"
+echo "${green_color}${version} "
+echo "${cyan_color}Reverse Elite System Exploiter Team"
+echo "${yellow_color}GitHub: https://github.com/sysadminteam/"
+echo "${red_color}Thanks to: "
+echo "${cyan_color}"
 echo "K1D2ZON3"
 echo "Mr. HC"
 echo "AMRiez"
@@ -262,20 +302,32 @@ echo "4WSec"
 echo "Handika Pratama"
 echo "Mr.Rm"
 echo "Mr.IM81"
-sleep 1
 echo "ACT"
 echo "SECURITY DARKNET"
-echo "\033[30;1m";pause 'Press [Enter] key to continue...';echo "\033[32;1m"
-exec bash -l
+echo "${white_color}";
+pause 'Press [Enter]] key to continue...';echo "${green_color}"
 fi
 
-if
-[ $mrrm = 0 ] || [ $mrrm = 0 ]
+if [[ $menu = 0 ]] || [[ $menu = 0 ]]
 then
-echo "\033[31;1m Quiting..."
+echo "${red_color} Quiting..."
 cd ..
-echo "\033[32;1m ...Complete"
+echo "${green_color} ...Complete"
 sleep 1
 clear
 exit
+fi
+
+if [[ $menu = "" ]] || [[ $menu = "" ]]
+then
+clear
+echo "
+ ________                           _______               __
+|  |  |  |.----.-----.-----.-----. |     __|.--.--.-----.|  |_.---.-.--.--.
+|  |  |  ||   _|  _  |     |  _  | |__     ||  |  |     ||   _|  _  |_   _|
+|________||__| |_____|__|__|___  | |_______||___  |__|__||____|___._|__.__|
+                           |_____|          |_____|
+"
+sleep 1
+sh ../launcher.sh
 fi
