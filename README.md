@@ -22,3 +22,5 @@ $ ./launcher.sh
 - few client added
 ### CLI v0.4.4
 - bug fixed
+### CLI v0.4.5
+- fixed bug for android terminal emulator
