@@ -6,7 +6,7 @@
 #Version......: CLI 0.4
 #Bash Version.: 4.2 or later
 
-version="CLI v0.4.3"
+version="CLI v0.4.4"
 
 #Colors vars
 green_color="\033[1;32m"
@@ -21,7 +21,7 @@ pink_color="\033[1;35m"
 white_color="\033[1;37m"
 normal_color="\033[1;0m"
 
-function print_logo() {
+function print_logo {
   sleep 0.15 && echo "${green_color} _______ ______ _______ _______ _______ _______ ______"
   sleep 0.15 && echo "|     __|   __ \   _   |   |   |   |   |    ___|   __ |"
   sleep 0.15 && echo "|__     |    __/       |       |       |    ___|      <"
@@ -36,14 +36,14 @@ function print_logo() {
   sleep 0.15
 }
 
-function dev() {
+function dev {
   echo "DevMode ON"
   pause 'Press anything to Exit'
   exit
 }
 
 cd sys
-function pause() {
+function pause {
   read -p "$*"
 }
 clear
