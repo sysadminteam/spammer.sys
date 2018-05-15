@@ -5,24 +5,20 @@ to run the script, execute launcher shell script.
 $ ./launcher.sh
 ```
 
-CLI v0.4 - Web GUI (not yet)
+# Changelog
 
-```
-Author: Fray117
-contact: fray117.sys@gmail.com
-Available Client:
-1.  tokopedia
-2.  Telkomsel
-3.  Matahari Mall
-4.  PHD
-5.  JD.id
-6.  Private Mailer
-7.  KFC
-8.  ZiPAY
-9.  whiskas
-10. HOOQ
-11. PHPMailer
-12. Facebook Comments
-13. WordPress Comments
-14. Grab
-```
+### CLI v0.1
+- combining available tools
+### CLI v0.2
+- sorting file
+### CLI v0.3
+- alpha released
+- bug fixed
+### CLI v0.4
+- redesign art logo
+- bug fixed
+- mail spammer added
+### CLI v0.4.3
+- few client added
+### CLI v0.4.4
+- bug fixed
