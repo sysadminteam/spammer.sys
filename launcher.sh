@@ -6,7 +6,7 @@
 #Version......: CLI 0.4
 #Bash Version.: 4.2 or later
 
-version="CLI v0.4.4"
+version="CLI v0.4.5"
 
 #Colors vars
 green_color="\033[1;32m"
@@ -21,33 +21,21 @@ pink_color="\033[1;35m"
 white_color="\033[1;37m"
 normal_color="\033[1;0m"
 
-function print_logo {
-  sleep 0.15 && echo "${green_color} _______ ______ _______ _______ _______ _______ ______"
-  sleep 0.15 && echo "|     __|   __ \   _   |   |   |   |   |    ___|   __ |"
-  sleep 0.15 && echo "|__     |    __/       |       |       |    ___|      <"
-  sleep 0.15 && echo "|_______|___|  |___|___|__|_|__|__|_|__|_______|___|__|"
-  sleep 0.15 && echo ""
-  sleep 0.15 && echo " _______ ___ ___ _______ _______ _______ _______"
-  sleep 0.15 && echo "|     __|   |   |     __|_     _|    ___|   |   |"
-  sleep 0.15 && echo "|__     |\     /|__     | |   | |    ___|       |"
-  sleep 0.15 && echo "|_______| |___| |_______| |___| |_______|__|_|__|${normal_color}"
-  sleep 0.15 && echo ""
-  sleep 0.15 && echo "$version"
-  sleep 0.15
-}
-
-function dev {
-  echo "DevMode ON"
-  pause 'Press anything to Exit'
-  exit
-}
-
 cd sys
-function pause {
-  read -p "$*"
-}
 clear
-print_logo
+sleep 0.15 && echo "${green_color} _______ ______ _______ _______ _______ _______ ______"
+sleep 0.15 && echo "|     __|   __ \   _   |   |   |   |   |    ___|   __ |"
+sleep 0.15 && echo "|__     |    __/       |       |       |    ___|      <"
+sleep 0.15 && echo "|_______|___|  |___|___|__|_|__|__|_|__|_______|___|__|"
+sleep 0.15 && echo ""
+sleep 0.15 && echo " _______ ___ ___ _______ _______ _______ _______"
+sleep 0.15 && echo "|     __|   |   |     __|_     _|    ___|   |   |"
+sleep 0.15 && echo "|__     |\     /|__     | |   | |    ___|       |"
+sleep 0.15 && echo "|_______| |___| |_______| |___| |_______|__|_|__|${normal_color}"
+sleep 0.15 && echo ""
+sleep 0.15 && echo "$version"
+sleep 0.15
+
 echo "${red_color} SYSTEM ADMINISTRATOR"
 echo "${yellow_color} Author: Fray117"
 echo "${green_color} contact: fray117.sys@gmail.com"
@@ -285,7 +273,18 @@ fi
 if [[ $menu = 81 ]] || [[ $menu = 81 ]]
 then
 clear
-print_logo
+sleep 0.15 && echo "${green_color} _______ ______ _______ _______ _______ _______ ______"
+sleep 0.15 && echo "|     __|   __ \   _   |   |   |   |   |    ___|   __ |"
+sleep 0.15 && echo "|__     |    __/       |       |       |    ___|      <"
+sleep 0.15 && echo "|_______|___|  |___|___|__|_|__|__|_|__|_______|___|__|"
+sleep 0.15 && echo ""
+sleep 0.15 && echo " _______ ___ ___ _______ _______ _______ _______"
+sleep 0.15 && echo "|     __|   |   |     __|_     _|    ___|   |   |"
+sleep 0.15 && echo "|__     |\     /|__     | |   | |    ___|       |"
+sleep 0.15 && echo "|_______| |___| |_______| |___| |_______|__|_|__|${normal_color}"
+sleep 0.15 && echo ""
+sleep 0.15 && echo "$version"
+sleep 0.15
 echo "${red_color}Developer: SYSTEM ADMINISTRATOR"
 echo "${green_color}Author: Fray117"
 echo "${green_color}${version} "
@@ -305,7 +304,8 @@ echo "Mr.IM81"
 echo "ACT"
 echo "SECURITY DARKNET"
 echo "${white_color}";
-pause 'Press [Enter]] key to continue...';echo "${green_color}"
+read -p "$* Press [Enter]] key to continue...";echo "${green_color}"
+sh ../launcher.sh
 fi
 
 if [[ $menu = 0 ]] || [[ $menu = 0 ]]
