@@ -1,5 +1,5 @@
 # SPAMMER SYSTEM
-Research about API FAKE REQUEST
+Research using Leaked API, this tools support many API (Warn: some API Security may updated, don't expect many requests)
 ```
 to run the script, execute launcher shell script.
 $ ./launcher.sh
